@@ -137,7 +137,7 @@ def main():
         elif pasirinkimas == 3:
             print("\nIšeinama iš programos...")
             break
-            
+
 if __name__ == "__main__":
     main()
     
