@@ -1,7 +1,7 @@
 import sqlalchemy as sqla
 from sqlalchemy.orm import declarative_base, sessionmaker
  
-engine = sqla.create_engine("sqlite:///main_database.db")
+engine = sqla.create_engine("sqlite:///paskaitu_failai/Duomenu_baziu_pagrindai/db.failai/main_database.db")
  
 Base = declarative_base() # pagrindinis sqlalchemy elementas, kuriame yra surisimo (klases su lentele) logika
 
@@ -24,8 +24,8 @@ Base.metadata.create_all(engine)
 session = sessionmaker(engine)
 Sess = session()
 knyga1 = Knyga("J.K", "Haris Poteris")
-Sess.add(knyga1)
-Sess.commit()
+# Sess.add(knyga1)
+# Sess.commit()
 
 print(Sess.query(Knyga).all())
-print(Sess.query(Knyga).filter_by(id=2).first())
+print(Sess.query(Knyga).filter_by(id=1).first())

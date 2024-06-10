@@ -2,7 +2,7 @@
 
 import sqlite3
 
-conn = sqlite3.connect("paskaitos1.db")
+conn = sqlite3.connect("paskaitu_failai/Duomenu_baziu_pagrindai/db.failai/paskaitos1.db")
 c = conn.cursor()
 
 c.execute(""" CREATE TABLE IF NOT EXISTS paskaitos (pavadinimas text, destytojas text, trukme integer) """)
