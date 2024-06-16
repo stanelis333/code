@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from tkinter import *
 import tkinter as tk
 
-engine = create_engine('sqlite:///paskaitu_failai/Duomenu_baziu_pagrindai/db.failai/Darbuotojai_2uzd.db')
+engine = create_engine('sqlite:///darbuotojai3.db')
 SessionMaker = sessionmaker(bind= engine)
 session = SessionMaker()
 

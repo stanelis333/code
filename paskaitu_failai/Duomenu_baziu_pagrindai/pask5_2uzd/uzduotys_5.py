@@ -2,7 +2,7 @@ import datetime
 from sqlalchemy import create_engine, Column, Integer, String, DateTime
 from sqlalchemy.orm import declarative_base 
 
-engine = create_engine('sqlite:///paskaitu_failai/Duomenu_baziu_pagrindai/db.failai/Darbuotojai_2uzd.db')
+engine = create_engine('sqlite:///darbuotojai3.db')
 Base = declarative_base()
 
 class Employees(Base):
