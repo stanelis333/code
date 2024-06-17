@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Sveiki</h1>
+
+<form action="login" method="post">
+
+<div class="mb-3">
+<label for="vardas" class="form-label">Įveskite varda</label>
+<input type="text" class="form-control" id="vardas" name="vardas">
+</div>
+<button type="submit" class="btn btn-primary">Siusti</button>
+</form>
+
+{% endblock %}
+
