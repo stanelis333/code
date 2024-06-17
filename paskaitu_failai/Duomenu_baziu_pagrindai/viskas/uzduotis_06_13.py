@@ -6,7 +6,7 @@ main_window.geometry("300x80")
 
 def pasisveikinti():
     name = e1.get()
-    pasisveikinimas.config(text=f"Labas, {name}")
+    pasisveikinimas.config(text=f"Sveiki, {name}")
 
 Label(main_window, text='Įveskite vardą').grid(row=0)
 e1 = Entry(main_window)
