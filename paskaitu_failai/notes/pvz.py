@@ -17,34 +17,34 @@
 #     def farenheit(self, value):
 #         self._farenheit = value
 
-
-# temp = Temperature(19)
+# insert = int(input("Iveskite temperatura celcijais: "))
+# temp = Temperature(insert)
 # print(f"Celsius: {temp._celsius}")  
 # print(f"Farenheit: {temp.farenheit}")  
 
 
 #nr.2
 
-class User():
-    def __init__(self, password):
-        self._password = password
+# class User():
+#     def __init__(self, password):
+#         self._password = password
 
-    @property
-    def password(self):
-        return self._password
+#     @property
+#     def password(self):
+#         return self._password
 
-    @password.setter
-    def password(self, value):
-        self._password = value
+#     @password.setter
+#     def password(self, value):
+#         self._password = value
 
-    @property
-    def ar_saugus(self):
-        if len(self._password) > 8:
-            return "saugus slaptazodis"
-        else:
-            return "nesaugus slaptazodis"
-passw = input('Iveskite slaptazodi: ')
-user = User(passw)
-print(user.password)
-print(user.ar_saugus)
+#     @property
+#     def ar_saugus(self):
+#         if len(self._password) > 8:
+#             return "saugus slaptazodis"
+#         else:
+#             return "nesaugus slaptazodis"
+# passw = input('Iveskite slaptazodi: ')
+# user = User(passw)
+# print(user.password)
+# print(user.ar_saugus)
 

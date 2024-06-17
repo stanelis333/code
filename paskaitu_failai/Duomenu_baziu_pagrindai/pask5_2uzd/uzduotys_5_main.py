@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from tkinter import *
 import tkinter as tk
 
-engine = create_engine('sqlite:///darbuotojai3.db')
+engine = create_engine('sqlite:///C:\code\paskaitu_failai\Duomenu_baziu_pagrindai\pask5_2uzd\darbuotojai.db')
 SessionMaker = sessionmaker(bind= engine)
 session = SessionMaker()
 
@@ -92,12 +92,20 @@ def change_data():
         employee.salary = new_salary
 
 def delete():
-    id = int(input("Įveskite šalinamo darbuotojo id: "))
-    employee = session.get(Employees, id)
-    session.delete(employee)
-    session.commit ()
+    master = Tk()
+    Label(master, text='Įveskite darbuotojo id, kurį norite pašalinti: ').grid(row=0)
+    e1 = Entry(master)
+    e1.grid(row=0, column=1)
+       
+    def find():
+        ee = e1.get()
+        employee = session.get(Employees, ee)
+        session.delete(employee)
+        session.commit ()
+        Label(master, text=f"Darbuotojas su id: ({employee.id})  sėkmingai pašalintas.").grid(row=1)
 
-
+    Button(master, text='Pašalinti', command=find).grid(row=3, column=0, columnspan=2)
+    
 
 r = tk.Tk()
 r.title('DARBUOTOJŲ VALDYMO PROGRAMA')
