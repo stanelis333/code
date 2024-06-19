@@ -16,17 +16,6 @@ def vartotojai_create():
         return redirect(url_for("vartotojai"))
     return render_template("vartotojai/create.html")
 
-@app.route("/masinos/create", methods=["GET", "POST"])
-def masinos_create():
-    if request.method == "POST":
-        brand = request.form["brand"]
-        model = request.form["model"]
-        year = request.form["year"]
-        sukurti_masina(brand, model, year)
-        return redirect(url_for("vartotojai"))
-    return render_template("masinos/create.html")
-
-
 @app.route("/vartotojai/delete/<int:id>", methods=["GET", "POST"])
 def vartotojai_delete(id):
     vartotojas = gauti_vartotoja(id)
@@ -43,6 +32,18 @@ def vartotojai_update(id):
         atnaujinti_vartotoja(id, name)
         return redirect(url_for("vartotojai"))
     return render_template("vartotojai/update.html", vartotojas=vartotojas)
+
+#--------------------------------------------------------------------------------MAŠINOS
+
+@app.route("/masinos/create", methods=["GET", "POST"])
+def masinos_create():
+    if request.method == "POST":
+        brand = request.form["brand"]
+        model = request.form["model"]
+        year = request.form["year"]
+        sukurti_masina(brand, model, year)
+        return redirect(url_for("vartotojai"))
+    return render_template("masinos/create.html")
 
 @app.route("/masinos/update/<int:id>", methods=["GET", "POST"])
 def masinos_update(id):

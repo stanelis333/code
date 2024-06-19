@@ -37,11 +37,11 @@ def sukurti_masina(brand, model, year):
     db.session.commit()
 
 
-def priskirti_masina_vartotojui(car_id, vartotojas_id):
+def priskirti_masina_vartotojui(car_id, vartotojo_id):
     masina = gauti_masina(car_id)
-    vartotojas = gauti_vartotoja(vartotojas_id)
+    vartotojas = gauti_vartotoja(vartotojo_id)
     if masina and vartotojas:
-        masina.vartotojas_id = vartotojas_id
+        masina.vartotojas_id = vartotojo_id
         db.session.commit()
         return True
     return False
