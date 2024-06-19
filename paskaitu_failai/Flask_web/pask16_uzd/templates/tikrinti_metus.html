@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+
+<h1>
+    {% if (metai % 4 == 0 and metai % 100 != 0) or (metai % 400 == 0) %}
+    <p>{{ metai }} yra keliamieji metai</p>
+{% else %}
+    <p>{{ metai }} nėra keliamieji metai</p>
+{% endif %}
+</h1>
+
+
+
+
+{% endblock %}

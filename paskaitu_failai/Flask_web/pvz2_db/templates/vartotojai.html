@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<table class="table">
+    <thead>
+    <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Age</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for vartotojas in sarasas %}
+    <tr>
+    <th scope="row">{{vartotojas.id}}</th>
+    <td>{{vartotojas.name}}</td>
+    <td>{{vartotojas.age}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+
+
+{% endblock %}
+

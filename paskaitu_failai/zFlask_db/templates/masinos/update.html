@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Priskirti Mašiną Vartotojui</h1>
+
+<form action="/masinos/update/{{ masina.id }}" method="post">
+    <div class="mb-3">
+        <label for="vartotojas_id" class="form-label">Įveskite vartotojo ID:</label>
+        <input type="number" class="form-control" id="vartotojas_id" name="vartotojas_id">
+    </div>
+    <button type="submit" class="btn btn-primary">Priskirti</button>
+</form>
+
+{% endblock %}

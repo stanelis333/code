@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
-
-app = Flask(__name__)
-
+from database import db, app
+from crud import *
 # @app.route("/")
 # def home():
 #     return """
@@ -27,6 +26,12 @@ def login():
         return render_template("pasisveikinimas.html", vardas = input)
     else:
         return render_template("login.html")
+
+
+@app.route("/vartotojai")
+def vartotojai():
+    vartotojai = gauti_visus_vartotojus()
+    return render_template("vartotojai.html", sarasas = vartotojai)
 
 if __name__ == "__main__":
     app.run()

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Labas</h1>
+
+<form action="/vartotojai/update/{{vartotojas.id}}" method="post">
+    <div class="mb-3">
+        <label for="vardas" class="form-label">Vardas</label>
+        <input type="text" class="form-control" id="vardas" name="vardas" value="{{vartotojas.name}}">
+    </div>
+    <div class="mb-3">
+        <label for="amzius" class="form-label">Amzius</label>
+        <input type="number" class="form-control" id="amzius" name="amzius" value="{{vartotojas.age}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Atnaujinti</button>
+</form>
+
+{% endblock %}

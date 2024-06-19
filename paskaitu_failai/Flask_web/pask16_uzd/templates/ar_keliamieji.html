@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Ar keliamieji metai</h1>
+
+<form action="ar_keliamieji" method="post">
+    <div class="mb-3">
+        <label for="metai" class="form-label">Įveskite metus</label>
+        <input type="number" class="form-control" id="metai" name="metai">
+    </div>
+    <button type="submit" class="btn btn-primary">Tikrink</button>
+</form>
+
+{% endblock %}
