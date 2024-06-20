@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Sukurti Mašiną.</h1>
+
+<form action="/masinos/create" method="post">
+    <div class="mb-3">
+        <label for="brand" class="form-label">Brand</label>
+        <input type="text" class="form-control" id="brand" name="brand">
+    </div>
+    <div class="mb-3">
+        <label for="model" class="form-label">Model</label>
+        <input type="text" class="form-control" id="model" name="model">
+    </div>
+    <div class="mb-3">
+        <label for="year" class="form-label">Year</label>
+        <input type="number" class="form-control" id="year" name="year">
+    </div>
+    <button type="submit" class="btn btn-primary">Sukurti</button>
+</form>
+
+{% endblock %}
