@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Ištrinti Mašina?</h1>
+
+<p>Ar tikrai norite ištrinti mašiną su ID {{ masina.id }} kurios markė {{ masina.brand }}?</p>
+
+<form action="/masinos/delete/{{ masina.id }}" method="post">
+    <button type="submit" class="btn btn-danger">Ištrinti</button>
+    <a class="btn btn-secondary" href="{{ url_for('vartotojai') }}">Atšaukti</a>
+</form>
+
+{% endblock %}

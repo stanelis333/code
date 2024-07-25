@@ -1,0 +1,33 @@
+
+
+Išvados:
+
+Duomenų paruošimas ir apdorojimas:
+1.Pradėtas darbas su dideliu duomenų rinkiniu, kuris buvo sumažintas naudojant atsitiktinį duomenų paėmimą (11%).
+2.Buvo atlikta duomenų kategorijų kodavimas naudojant „one-hot“ kodavimą, kad būtų galima dirbti su kategorinėmis reikšmėmis.
+3.Keli kintamieji, kurie neturėjo reikšmingos koreliacijos arba buvo pertekliniai, buvo pašalinti iš duomenų rinkinio.
+4.Naudojant IQR metodą, buvo tvarkomi "outlaerei", užtikrinant, kad visi kintamieji būtų labiau pritaikyti analizei.
+
+
+Vizualizacijos ir duomenų tyrimas:
+1.Naudota „heatmap“ koreliacijos analizei, kad būtų galima pamatyti sąsajas tarp skirtingų kintamųjų.
+2.Atliekant „violin“ diagramų analizę, buvo ištirta sveikatos rodiklių ir alkoholio vartojimo sąsaja, kas parodė, kaip šie rodikliai
+  skiriasi tarp geriančiųjų ir negeriančiųjų.
+
+
+Modelių kūrimas ir vertinimas:
+1.Sukurti penki skirtingi modeliai: logistinės regresijos, K-Nearest Neighbors (KNN), Support Vector Classifier (SVC), Random Forest ir Gradient Boosting Classifier.
+2.Modeliai buvo treniruoti su treniruočių duomenimis ir įvertinti su testavimo duomenimis.
+3.Modelių vertinimas atliktas naudojant „classification_report“ ir „accuracy_score“ metodus, siekiant įvertinti jų veikimą.
+
+
+Modelių palyginimas:
+1.RandomForestClassifier pasirodė esąs tiksliausias modelis, pasiekęs aukščiausią tikslumo lygį (0.7598533455545371).
+2.Kiti modeliai, tokie kaip GradientBoostingClassifier, Logistic Regression, SVC ir KNN, taip pat pasiekė gerus rezultatus, tačiau šiek tiek nusileido RandomForestClassifier.
+3.Rezultatai buvo pateikti grafiškai naudojant „barplot“, kad būtų lengviau palyginti skirtingų modelių tikslumą.
+  
+
+Bendros įžvalgos:
+1.Naudojant įvairius klasifikavimo metodus ir palyginant jų rezultatus, galima išsiaiškinti, kurie metodai yra tinkamiausi konkrečiam duomenų rinkiniui.
+2.Vizualizacijos padėjo geriau suprasti duomenų struktūrą ir kintamųjų sąsajas.
+3.Svarbu atlikti duomenų paruošimo ir apdorojimo žingsnius, kad modeliai veiktų efektyviai ir pateiktų tikslius rezultatus.
